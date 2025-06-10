@@ -77,3 +77,60 @@ Allows the admin to update the reward rate. This gives the protocol flexibility 
 
 ---
 
+### 🙋 User Functions
+
+These functions are accessible by users participating in the protocol, such as traders or liquidity providers.
+
+#### `create_user_account`
+
+Sets up a user-specific on-chain account to track their trading volume, staking status, and reward eligibility.
+
+#### `record_swap_volume`
+
+This function is called after a trade is executed. It logs the amount of volume the user generated so it can be used for calculating rewards.
+
+#### `stake_tokens`
+
+Users can stake $IDXFLOW tokens into the protocol. Doing so unlocks higher staking tiers, which grant increased fee discounts and reward multipliers.
+
+#### `unstake_tokens`
+
+Users can withdraw (unstake) their tokens. Doing so may lower their fee tier, depending on how much they withdraw.
+
+#### `claim_rewards`
+
+After an epoch ends, eligible users can call this function to claim their earned rewards. The system ensures rewards are only claimed once per epoch.
+
+#### `get_fee_discount`
+
+Returns the user’s current fee discount percentage based on their staking tier. Useful for DEXs or aggregators applying discounted trading fees.
+
+---
+
+## 🧱 Account Structure
+
+The contract uses two main account types to store global and user-specific data.
+
+### `GlobalState`
+
+Holds configuration values and protocol-wide metrics, including:
+
+- Admin authority  
+- Reward rate (tokens per volume unit)  
+- Epoch duration and tracking  
+- Minimum volume threshold  
+- Total rewards distributed  
+
+### `UserAccount`
+
+Tracks individual user metrics, including:
+
+- Wallet address  
+- Total and epoch trading volume  
+- Amount of tokens staked  
+- Current fee tier  
+- Last epoch when rewards were claimed  
+
+---
+
+

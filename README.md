@@ -133,4 +133,16 @@ Tracks individual user metrics, including:
 
 ---
 
+## 🔐 Security Features
+
+IDXFLOW is designed with robust security measures:
+
+- **Program Derived Addresses (PDAs)**: Ensure secure and deterministic account derivation for both global and user state.
+- **Epoch-Based Claiming**: Prevents duplicate reward claims in the same epoch.
+- **Authority Checks**: Only the authorized admin can perform configuration changes.
+- **Checked Arithmetic**: All reward and volume calculations use safe math to prevent overflow.
+- **Minimum Volume Thresholds**: Blocks low-effort spam or volume manipulation attacks.
+
+---
+
 

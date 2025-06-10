@@ -145,4 +145,15 @@ IDXFLOW is designed with robust security measures:
 
 ---
 
+## ⚠️ Error Handling
+
+IDXFLOW includes several error guards to prevent misuse:
+
+- **InsufficientStakedAmount**: Thrown if a user tries to unstake more tokens than they have staked.
+- **AlreadyClaimedThisEpoch**: Prevents a user from claiming rewards more than once per epoch.
+- **InsufficientVolume**: Indicates the user didn’t meet the minimum required trading volume to be eligible for rewards.
+- **Unauthorized**: Blocks unauthorized accounts from modifying protocol parameters.
+
+---
+
 

@@ -56,3 +56,24 @@ A **Solana-based smart contract system** that incentivizes high-frequency tradin
 - **Per-epoch reward claiming** with built-in anti-double-claim protection  
 
 ---
+
+## 🔧 Core Functions
+
+IDXFLOW consists of two main categories of functions: **Administrative** and **User-facing**.
+
+---
+
+### 🛠️ Administrative Functions
+
+These functions can only be called by the contract’s authorized admin (typically the protocol owner or governance).
+
+#### `initialize`
+
+This function sets up the global state for the contract. It configures the reward rate (tokens distributed per unit of trading volume), the duration of each reward epoch (measured in seconds), and the minimum volume a user must trade within an epoch to be eligible for rewards.
+
+#### `update_reward_rate`
+
+Allows the admin to update the reward rate. This gives the protocol flexibility to adjust token emissions as needed based on market dynamics or governance decisions.
+
+---
+

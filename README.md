@@ -2,7 +2,9 @@
 
 # IDXFLOW – Orderflow Incentive Token
 
-A **Solana-based smart contract system** that incentivizes high-frequency trading through volume-based token rewards and staking-tier fee discounts.
+A **Solana-based smart contract system** that incentivizes high-frequency trading through volume-based token rewards and staking-tier fee discounts. This project was developed in Solana Playground IDE 
+
+**devnet**:(https://explorer.solana.com/address/BH4AjERjFgoXUqJFN8GkuF1rgWQzidBwBkiibsHHpVJR?cluster=devnet)
 
 ---
 
